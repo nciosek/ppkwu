@@ -7,11 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ReverseController {
 
+    StringBuilder stringBuilder;
+
     @GetMapping("/{str}")
     public String rev(@PathVariable String str){
-        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder = new StringBuilder();
         stringBuilder.append(str);
         return stringBuilder.reverse().toString();
     }
-
 }
