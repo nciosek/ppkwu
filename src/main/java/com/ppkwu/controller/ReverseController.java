@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class SampleController {
+public class ReverseController {
 
     @GetMapping("/{str}")
     public String rev(@PathVariable String str){
