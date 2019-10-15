@@ -1,18 +1,27 @@
 package com.ppkwu.service;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ReverseService {
 
-    public String reverse(String str){
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(str);
-        return stringBuilder.reverse().toString();
+    public String reverse(String data) {
+        StringBuilder input = new StringBuilder();
+        input.append(data);
+        return input.reverse().toString();
     }
 
-    public String validate(String data){
+    public String validate(String data) {
         StringBuilder result = new StringBuilder();
-        if (data.chars().anyMatch(v -> v >= 48 && v <= 57)){
-            result.append("numbers");
+        if (data.chars().anyMatch(value -> value >= 48 && value <= 57)) {
+            result.append("numbers ");
         }
-        return null;
+        if (data.chars().anyMatch(value -> (value >= 65 && value <= 90) || (value >= 97 && value <= 122))) {
+            result.append("letters ");
+        }
+        if (data.chars().anyMatch(value -> (value >= 32 && value <= 47) || (value >= 58 && value <= 64) || (value >= 91 && value <= 96) || (value >= 123))) {
+            result.append("special ");
+        }
+        return result.toString();
     }
 }
