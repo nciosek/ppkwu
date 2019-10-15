@@ -26,7 +26,7 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Reverse API")
+                .title("PPKWU - Reverse API with validation")
                 .description(" ")
                 .contact(new Contact("Natalia Ciosek",
                         "http://github.com/nciosek/ppkwu",
