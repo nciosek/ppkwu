@@ -59,6 +59,12 @@ API przyjmuje dowolny ciąg znaków i **odwraca** oraz **analizuje** podany prze
   dane wejściowe: testowy67
   dane wyjściowe: false
 ```
+```
+  http://localhost:8080/count/uppercase/TeSt
+  
+  dane wejściowe: TeSt
+  dane wyjściowe: 2
+```
 * Zadanie 2 - Swagger UI - przejrzysta wizualizacja zasobów API
 ```
   http://localhost:8080/swagger-ui.html
