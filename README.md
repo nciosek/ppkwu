@@ -44,7 +44,7 @@ API przyjmuje dowolny ciąg znaków i **odwraca** oraz **analizuje** podany prze
 ```
   http://localhost:8080/contain/uppercase/TEstoWY1234  
   
-  dane wejściowe: TESTOWY1234
+  dane wejściowe: TEstoWY1234 
   dane wyjściowe: true
 ```
 ```
