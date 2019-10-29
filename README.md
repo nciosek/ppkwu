@@ -10,10 +10,10 @@ API przyjmuje dowolny ciąg znaków i odwraca oraz analizuje podany przez użytk
 | GET    | /reverse/                   | {data}   | Zwraca odwrócony ciąg znaków                            |
 | GET    | /validate/                  | {data}   | Zwraca nazwę elementów występujących w parametrze       |
 | GET    | /length/                    | {data}   | Zwraca długość parametru                                |
-| GET    | /contain/whitespace/        | {data}   | Zwraca "true" jeśli to biały znak                       |
-| GET    | /contain/uppercase/         | {data}   | Zwraca "true" jeśli to duża litera                      |
-| GET    | /contain/lowercase/         | {data}   | Zwraca "true" jeśli to mała litera                      |
-| GET    | /contain/specialsymbol/     | {data}   | Zwraca "true" jeśli to znak specjalny                   |
+| GET    | /contain/whitespace/        | {data}   | Zwraca "true" jeśli ciąg zawiera biały znak             |
+| GET    | /contain/uppercase/         | {data}   | Zwraca "true" jeśli ciąg zawiera wielką literę          |
+| GET    | /contain/lowercase/         | {data}   | Zwraca "true" jeśli ciąg zawiera małą literę            |
+| GET    | /contain/specialsymbol/     | {data}   | Zwraca "true" jeśli ciąg zawiera znak specjalny         |
 | GET    | /digit/                     | {data}   | Zwraca "true" jeśli to liczba                           |
 | GET    | /count/uppercase/           | {daat}   | Zwraca liczbę wystąpień dużej litery podanym ciągu      |
 | GET    | /count/lowercase/           | {data}   | Zwraca liczbę wystąpień małej litery w podanym ciągu    |
@@ -23,15 +23,41 @@ API przyjmuje dowolny ciąg znaków i odwraca oraz analizuje podany przez użytk
 * Zadanie 1 - odwrócienie podanego ciągu znaku w parametrze
 ```
   http://localhost:8080/reverse/testowy
+  
+  dane wejściowe: testowy
+  dane wyjściowe: ywotset
 ```
 * Zadanie 2 - zwrócenie nazwy elementów występujących w podanym parametrze
 ```
   http://localhost:8080/validate/Testowy1234*
+  
+  dane wejściowe: Testowy1234*
+  dane wyjciowe: big letters | small letters | numbers | special |
 ```
 * Zadanie 2 - wykrzystanie przykładowej pojedynczej usługi
 ```
   http://localhost:8080/contain/uppercase/TESTOWY
-  http://localhost:8080/conatin/uppercase/TESTOWY1234
+  
+  dane wejściowe: TESTOWY
+  dane wyjściowe: true
+```
+```
+  http://localhost:8080/contain/uppercase/TEstoWY1234  
+  
+  dane wejściowe: TESTOWY1234
+  dane wyjściowe: true
+```
+```
+  http://localhost:8080/contain/uppercase/1234
+  
+  dane wejściowe: 1234
+  dane wyjściowe: false
+```
+```
+  http://localhost:8080/digit/testowy67
+  
+  dane wejściowe: testowy67
+  dane wyjściowe: false
 ```
 * Zadanie 2 - Swagger UI - przejrzysta wizualizacja zasobów API
 ```
