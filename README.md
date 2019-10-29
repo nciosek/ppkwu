@@ -2,7 +2,7 @@
 
 ## Laboratorium 1 i 2
 
-API przyjmuje dowolny ciąg znaków i odwraca oraz analizuje podany przez użytkownika parametr pod kątem wybranej usługi.
+API przyjmuje dowolny ciąg znaków i **odwraca** oraz **analizuje** podany przez użytkownika parametr pod kątem wybranej usługi.
 
 ## Opis zadań
 | Metoda | Ścieżka                     | Parametr | Opis                                                    |
